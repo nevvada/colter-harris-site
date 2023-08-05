@@ -9,19 +9,24 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  }
+  } */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply animate-moveBackgroundDown;
+  background-image: url('../../public/images/purpleish.png');
+  color: whitesmoke;
+  text-shadow: whitesmoke 1px 0 10px;
+}
+
+main {
+  @apply animate-moveBackgroundDown;
+  background-image: url('/images/bubbles.png');
+  border: 10px outset #9198e5;
+  margin-left: 25%;
+  max-width: 50%;
 }

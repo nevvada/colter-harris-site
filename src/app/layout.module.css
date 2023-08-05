@@ -1,0 +1,16 @@
+/* .content {
+  animation: moveBackgroundUp 100s linear infinite;
+  background-image: url('../../public/bubbles.png');
+  border: 10px outset #9198e5;
+  margin-left: 25%;
+  max-width: 50%;
+} */
+
+@keyframes moveBackgroundUp {
+  0% {
+      background-position: 50% 50%;
+  }
+  100% {
+      background-position: 0 0 ;
+  }
+}
