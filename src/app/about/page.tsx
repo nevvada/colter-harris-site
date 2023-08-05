@@ -1,9 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 
 import Header from '../Header/Header';
 
-import styles from './about.module.css';
 import CustomImage from '../CustomImage/CustomImage';
 
 const ABOUT_HEADER_IMAGES = [
@@ -30,13 +28,13 @@ const PORTRAIT_IMAGE_STYLES = {
 
 function Page(): React.ReactElement {
   return (
-    <>
-      <main className="content flex flex-col items-center">
-        <Header
-          headerImages={ABOUT_HEADER_IMAGES}
-          headerText={ABOUT_HEADER_TEXT}
-        />
+    <main className="flex flex-col items-center">
+      <Header
+        headerImages={ABOUT_HEADER_IMAGES}
+        headerText={ABOUT_HEADER_TEXT}
+      />
 
+      <div className="content">
         <CustomImage
           imageAlt="colter portrait upclose"
           imageSrc="/images/colter_upclose.jpeg"
@@ -53,35 +51,8 @@ function Page(): React.ReactElement {
           imageSrc="/images/colter_lensflare.jpeg"
           styles={PORTRAIT_IMAGE_STYLES}
         />
-      </main>
-    </>
-    // <main className="content flex flex-col items-center">
-    //   <div className={`items-center grid` ${styles.aboutHeader}}>
-    //     <Image
-    //       className="about-header-gif"
-    //       src="images/cow.gif"
-    //     />
-    //     <h1 className="about-header-h1">ABOUT ME</h1>
-    //     <Image
-    //       className="about-header-gif"
-    //       src="images/dancing_dudes.gif"
-    //     />
-    //   </div>
-
-    //   <img
-    //     className="about-portrait"
-    //     src="images/colter_upclose.jpeg"
-    //   />
-    //   <div className="about-text">
-    //     <div>{aboutText}</div>
-    //     <div>- Alex Berg</div>
-    //   </div>
-    //   <img
-    //     className="about-portrait"
-    //     src="images/colter_lensflare.jpeg"
-    //   />
-    // </main>
-    // </Layout>
+      </div>
+    </main>
   );
 }
 
