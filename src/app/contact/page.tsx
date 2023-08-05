@@ -3,20 +3,9 @@
 import React, { useState } from 'react';
 import Header from '../Header/Header';
 
+import { CONTACT_PAGE } from '../routeConfig';
+
 import styles from './contact.module.css';
-
-const CONTACT_HEADER_IMAGES = [
-  {
-    imageAlt: 'goblin friend',
-    imageSrc: '/images/goblin.gif',
-  },
-  {
-    imageAlt: 'spinning globe',
-    imageSrc: '/images/globe.gif',
-  },
-];
-
-const CONTACT_HEADER_TEXT = 'CONTACT';
 
 const CONTACT_FORM_INPUT_CLASS = 'bg-gray-200 text-black text-xl';
 
@@ -46,8 +35,8 @@ function Page() {
   return (
     <main>
       <Header
-        headerImages={CONTACT_HEADER_IMAGES}
-        headerText={CONTACT_HEADER_TEXT}
+        headerImages={CONTACT_PAGE.headerImages}
+        headerText={CONTACT_PAGE.headerText}
       />
 
       <div className={`grid content ${styles.contactContainer}`}>

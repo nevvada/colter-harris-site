@@ -1,9 +1,9 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Inconsolata } from 'next/font/google';
 
-import styles from './layout.module.css';
 import NavBar from './NavBar/NavBar';
+
+import './globals.css';
 
 const inconsolata = Inconsolata({ subsets: ['latin'] });
 
