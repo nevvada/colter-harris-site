@@ -9,7 +9,7 @@ export const ABOUT_PAGE = {
       imageSrc: '/images/dancing_dudes.gif',
     },
   ],
-  headerText: 'ABOUT ME',
+  headerText: 'whoami',
 };
 
 export const CONTACT_PAGE = {
@@ -23,7 +23,7 @@ export const CONTACT_PAGE = {
       imageSrc: '/images/globe.gif',
     },
   ],
-  headerText: 'CONTACT',
+  headerText: 'hit me up',
 };
 
 export const VIDEOS_PAGE = {
@@ -37,5 +37,5 @@ export const VIDEOS_PAGE = {
       imageSrc: '/images/clapperboard.gif',
     },
   ],
-  headerText: 'VIDEOS',
+  headerText: 'portfolio',
 };

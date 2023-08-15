@@ -11,19 +11,20 @@ const ABOUT_CONTENT_TEXT =
 const PORTRAIT_IMAGE_STYLES = {
   border: '10px outset #9198e5',
   gridRow: 2,
-  width: '400px',
+  width: '500px',
 };
 
 function Page(): React.ReactElement {
   return (
-    <main className="flex flex-col items-center">
+    <main>
       <Header
         headerImages={ABOUT_PAGE.headerImages}
         headerText={ABOUT_PAGE.headerText}
       />
 
-      <div className="content">
+      <div className="content flex flex-col items-center">
         <CustomImage
+          classes="mb-8"
           imageAlt="colter portrait upclose"
           imageSrc="/images/colter_upclose.jpeg"
           styles={PORTRAIT_IMAGE_STYLES}
@@ -31,10 +32,11 @@ function Page(): React.ReactElement {
 
         <article>
           <p>{ABOUT_CONTENT_TEXT}</p>
-          <p>- Alex Berg</p>
+          <p className="mt-4">- Alex Berg</p>
         </article>
 
         <CustomImage
+          classes="mt-8"
           imageAlt="colter portrait lensflare"
           imageSrc="/images/colter_lensflare.jpeg"
           styles={PORTRAIT_IMAGE_STYLES}

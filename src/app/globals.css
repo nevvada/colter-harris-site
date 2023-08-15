@@ -20,6 +20,7 @@ body {
   @apply animate-moveBackgroundDown;
   background-image: url('../../public/images/purpleish.png');
   color: whitesmoke;
+  font-size: 1.5rem;
   text-shadow: whitesmoke 1px 0 10px;
 }
 
@@ -33,4 +34,5 @@ main {
 
 main > .content {
   margin: 50px;
+  font-size: 1.75rem;
 }

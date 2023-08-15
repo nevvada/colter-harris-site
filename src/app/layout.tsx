@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Inconsolata } from 'next/font/google';
+// import { useState } from 'react';
 
-import NavBar from './NavBar/NavBar';
+import LandingPageToggle from './LandingPageToggle/LandingPageToggle';
 
 import './globals.css';
 
@@ -12,16 +13,17 @@ export const metadata: Metadata = {
   description: 'Site for Colter Harris, filmmaker, artist, and living cartoon.',
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface Props {
   children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={`${inconsolata.className}`}>
-        <NavBar />
-        {children}
+        <LandingPageToggle>
+          {children}
+        </LandingPageToggle>
       </body>
     </html>
   );
