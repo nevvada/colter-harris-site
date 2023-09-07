@@ -1,6 +1,8 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useCallback, useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import Header from '../Header/Header';
 
 import { CONTACT_PAGE } from '../routeConfig';
@@ -9,7 +11,9 @@ import styles from './contact.module.css';
 
 const CONTACT_FORM_INPUT_CLASS = 'bg-gray-200 text-black text-xl';
 
-function Page() {
+function ContactPage() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   const [formData, setFormData] = useState({
     email: '',
     name: '',
@@ -27,9 +31,23 @@ function Page() {
     }));
   }
 
-  function submitForm(event: React.FormEvent) {
+  async function handleSubmitForm(event: React.FormEvent) {
     event.preventDefault();
-    console.log('form data', formData)
+
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not available yet');
+
+      return;
+    }
+
+    const gRecaptchaToken = await executeRecaptcha('formSubmit');
+    await submitForm(gRecaptchaToken);
+  }
+
+  async function submitForm(gRecaptchaToken: string) {
+    const response = await axios.post('/api/email', { formData, gRecaptchaToken });
+
+    console.log('~~~~~resyyyy`~~', response);
   }
 
   return (
@@ -40,11 +58,12 @@ function Page() {
       />
 
       <div className={`grid content ${styles.contactContainer}`}>
-        <form className="flex flex-col" onSubmit={submitForm}>
+        <form className="flex flex-col" onSubmit={handleSubmitForm}>
           <label htmlFor="name">Name</label>
           <input
             id="name"
             className={CONTACT_FORM_INPUT_CLASS}
+            dir="auto"
             name="name"
             onChange={handleInputChange}
             value={formData.name}
@@ -55,6 +74,7 @@ function Page() {
           <input
             id="email"
             className={CONTACT_FORM_INPUT_CLASS}
+            dir="auto"
             name="email"
             onChange={handleInputChange}
             value={formData.email}
@@ -65,6 +85,7 @@ function Page() {
           <textarea
             id="message"
             className={CONTACT_FORM_INPUT_CLASS}
+            dir="auto"
             name="message"
             onChange={handleInputChange}
             style={{ resize: 'none' }}
@@ -87,4 +108,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default ContactPage;
