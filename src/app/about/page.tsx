@@ -14,7 +14,7 @@ const PORTRAIT_IMAGE_STYLES = {
   width: '500px',
 };
 
-function Page(): React.ReactElement {
+function AboutPage(): React.ReactElement {
   return (
     <main>
       <Header
@@ -46,4 +46,4 @@ function Page(): React.ReactElement {
   );
 }
 
-export default Page;
+export default AboutPage;

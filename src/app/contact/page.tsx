@@ -1,7 +1,7 @@
 'use client';
 
 import axios from 'axios';
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import Header from '../Header/Header';
 
@@ -45,9 +45,7 @@ function ContactPage() {
   }
 
   async function submitForm(gRecaptchaToken: string) {
-    const response = await axios.post('/api/email', { formData, gRecaptchaToken });
-
-    console.log('~~~~~resyyyy`~~', response);
+    await axios.post('/api/email', { formData, gRecaptchaToken });
   }
 
   return (

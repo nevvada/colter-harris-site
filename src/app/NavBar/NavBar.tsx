@@ -23,7 +23,7 @@ const LINKS: Link[] = [
     id: 0,
     imageAlt: 'slug',
     imageSrc: '/images/slug.gif',
-    name: 'ABOUT',
+    name: 'about',
     href: '/about',
   },
   {
@@ -31,7 +31,7 @@ const LINKS: Link[] = [
     id: 1,
     imageAlt: 'slug',
     imageSrc: '/images/email.gif',
-    name: 'CONTACT',
+    name: 'contact',
     href: '/contact',
   },
   {
@@ -39,7 +39,7 @@ const LINKS: Link[] = [
     id: 2,
     imageAlt: 'slug',
     imageSrc: '/images/cameraman_run.gif',
-    name: 'VIDEOS',
+    name: 'videos',
     href: '/videos',
   },
 ];

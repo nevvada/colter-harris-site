@@ -13,14 +13,17 @@ function LandingPage(props: Props) {
   }
 
   return (
-    <>
+    <div className="flex flex-col items-center">
       <CustomImage
         imageAlt="skull"
         imageSrc="/images/welcome_colter_zone3.png"
-        styles={{}}
       />
 
-      <CustomImage imageAlt="skull" imageSrc="/images/skullfire.gif" />
+      <CustomImage
+        imageAlt="skull"
+        imageSrc="/images/skullfire.gif"
+        styles={{ width: '20%' }}
+      />
 
       <div onClick={handleClick}>
         <CustomImage
@@ -28,7 +31,7 @@ function LandingPage(props: Props) {
           imageSrc="/images/enter_3.gif"
         />
       </div>
-    </>
+    </div>
   );
 }
 

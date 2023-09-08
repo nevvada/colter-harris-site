@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inconsolata } from 'next/font/google';
-// import { useState } from 'react';
+import { StrictMode } from 'react';
 
 import LandingPageToggle from './LandingPageToggle/LandingPageToggle';
 
@@ -19,12 +19,12 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
-      <body className={`${inconsolata.className}`}>
-        <LandingPageToggle>
-          {children}
-        </LandingPageToggle>
-      </body>
-    </html>
+    <StrictMode>
+        <html lang="en">
+          <body className={`${inconsolata.className}`}>
+            <LandingPageToggle>{children}</LandingPageToggle>
+          </body>
+        </html>
+    </StrictMode>
   );
 }

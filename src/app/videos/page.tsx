@@ -33,7 +33,7 @@ function renderVideoSection() {
   ));
 }
 
-export default function Videos(): React.ReactElement {
+export default function VideosPage(): React.ReactElement {
   return (
       <main className="videos">
         <Header
