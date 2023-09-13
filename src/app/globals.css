@@ -28,11 +28,27 @@ main {
   @apply animate-moveBackgroundDown;
   background-image: url('/images/bubbles.png');
   border: 10px outset #9198e5;
-  margin-left: 25%;
-  max-width: 50%;
+  margin: 5%;
 }
 
 main > .content {
   margin: 50px;
   font-size: 1.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin-right: 20%;
+  }
+}
+
+.hypercamWatermark {
+  position: fixed;
+  background-color: #fff;
+  color: #000;
+  padding: 2px;
+  line-height: 20px;
+  font-size: 25px;
+  z-index: 1000;
+  text-shadow: none;
 }
