@@ -28,7 +28,7 @@ function renderVideoSection() {
   return ALL_VIDEOS.map(({ embed, id, name }) => (
     <section key={id}>
       <h2>{name}</h2>
-      {embed}
+      <div className={styles.embed}>{embed}</div>
     </section>
   ));
 }

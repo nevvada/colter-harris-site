@@ -22,7 +22,7 @@ function LandingPage(props: Props) {
       <CustomImage
         imageAlt="skull"
         imageSrc="/images/skullfire.gif"
-        styles={{ width: '20%' }}
+        styles={{ width: '15%' }}
       />
 
       <div onClick={handleClick}>

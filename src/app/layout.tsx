@@ -31,6 +31,7 @@ export default function RootLayout({ children }: Props) {
             </div>
             <LandingPageToggle>{children}</LandingPageToggle>
           </body>
+          <link rel="icon" href="/images/favicon.ico" sizes="any" />
         </html>
     </StrictMode>
   );

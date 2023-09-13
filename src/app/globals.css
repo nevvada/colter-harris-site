@@ -26,6 +26,7 @@ body {
 
 main {
   @apply animate-moveBackgroundDown;
+  background-attachment: fixed;
   background-image: url('/images/bubbles.png');
   border: 10px outset #9198e5;
   margin: 5%;

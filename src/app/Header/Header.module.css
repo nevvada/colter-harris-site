@@ -1,7 +1,21 @@
 .header {
   grid-column: span 3;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: none;
   justify-items: center;
+}
+
+.header img {
+  height: 100px;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .header img {
+    height: auto;
+  }
 }
 
 .headerText {

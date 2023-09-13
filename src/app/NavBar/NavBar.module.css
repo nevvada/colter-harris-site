@@ -20,6 +20,7 @@
 
 .navBar {
   @apply animate-moveBackgroundDown;
+  background-attachment: fixed;
   background-image: url('/images/bubbles.png');
   border: 10px outset #9198e5;
   display: flex;
@@ -58,7 +59,7 @@
     grid-template-rows: none;
     grid-template-columns: 25% 75%;
     height: 80vh;
-    margin-top: 30%;
+    margin-top: 15%;
     margin-left: 5%;
     width: 80%;
   }
