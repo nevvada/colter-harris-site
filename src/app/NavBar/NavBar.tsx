@@ -15,7 +15,7 @@ interface Link {
   href: string;
 }
 
-const SHARED_LINK_CLASS = 'items-center cursor-pointer grid h-40 justify-center m-2 p-2 w-40';
+const SHARED_LINK_CLASS = 'items-center cursor-pointer grid justify-center m-2 p-2';
 
 const LINKS: Link[] = [
   {
@@ -69,21 +69,23 @@ function NavBar() {
   return (
     <aside
       className={`
-        items-center flex flex-col h-screen justify-center mb-5 fixed w-1/5
+        items-center mb-5
         ${styles.navBar}
       `}
     >
       <Image
         alt="Colter Harris header"
+        className={styles.colterHarrisHeader}
         height={0}
         src="/images/colter_harris_header.png"
-        style={{ height: 'auto' }}
         width={800}
       />
 
       <StarMarquee />
 
-      {renderLinks()}
+      <div className={styles.links}>
+        {renderLinks()}
+      </div>
     </aside>
   );
 }

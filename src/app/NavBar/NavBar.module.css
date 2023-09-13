@@ -1,7 +1,7 @@
 .linkButton {
   background-image: linear-gradient(#0b5563, #9198e5);
   border: 10px outset #9198e5;
-  grid-template-rows: 80% 20%;
+  width: 20rem;
 }
 
 .linkButton:hover {
@@ -9,29 +9,76 @@
   border: 10px inset #0b5563;
 }
 
+/* in mobile, remove the image to conserve space */
+.linkButton > img {
+  display: none;
+}
+
+.colterHarrisHeader {
+  width: 350px;
+}
+
 .navBar {
   @apply animate-moveBackgroundDown;
   background-image: url('/images/bubbles.png');
   border: 10px outset #9198e5;
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
   padding: 10px 20px;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .colterHarrisHeader {
+    width: 250px;
+  }
+
+  .linkButton {
+    grid-template-rows: 80% 20%;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .linkButton > img {
+    display: block;
+  }
+
+  .links {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .navBar {
+    grid-template-rows: none;
+    grid-template-columns: 25% 75%;
+    height: 80vh;
+    margin-top: 30%;
+    margin-left: 5%;
+    width: 80%;
+  }
+}
 
 /* ANIMATIONS */
 @keyframes flash {
   0% {
-      color: #a2bce0;
+    color: #a2bce0;
   }
   25% {
-      color: #5299d3;
+    color: #5299d3;
   }
   50% {
-      color: #50285a;
+    color: #50285a;
   }
   75% {
-      color: #0b5563;
+    color: #0b5563;
   }
   100% {
-      color: #a2bce0;
+    color: #a2bce0;
   }
 }

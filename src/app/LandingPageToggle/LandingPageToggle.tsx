@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
+import styles from './landingPageToggle.module.css';
+
 import LandingPage from '../LandingPage/LandingPage';
 import NavBar from '../NavBar/NavBar';
 
@@ -43,10 +45,11 @@ function LandingPageToggle({ children }: Props) {
       {showLandingPage ? (
         <LandingPage setShowLandingPage={handleClick} />
       ) : (
-        <>
+        <div className={styles.layout}>
+
           <NavBar />
           {children}
-        </>
+        </div>
       )}
     </GoogleReCaptchaProvider>
   );
