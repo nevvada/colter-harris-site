@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Props) {
         <html lang="en">
           <body className={`${inconsolata.className}`}>
             <div className={`${vt323.className} hypercamWatermark`}>
-              Unregistered Hypercam 2
+              Unregistered HyperCam 2
             </div>
             <LandingPageToggle>{children}</LandingPageToggle>
           </body>
