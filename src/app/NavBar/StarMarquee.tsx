@@ -8,7 +8,7 @@ function Star() {
     <Image
       alt="star"
       height={0}
-      src="/images/star.gif"
+      src="https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711320/colter%20harris%20site/star_nhwwir.gif"
       style={{ height: 'auto' }}
       width={50}
     />

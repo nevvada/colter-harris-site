@@ -26,7 +26,7 @@ function AboutPage(): React.ReactElement {
         <CustomImage
           classes="mb-8"
           imageAlt="colter portrait upclose"
-          imageSrc="/images/colter_upclose.jpeg"
+          imageSrc="https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711234/colter%20harris%20site/colter_upclose_i3q9xi.jpg"
           styles={PORTRAIT_IMAGE_STYLES}
         />
 
@@ -38,7 +38,7 @@ function AboutPage(): React.ReactElement {
         <CustomImage
           classes="mt-8"
           imageAlt="colter portrait lensflare"
-          imageSrc="/images/colter_lensflare.jpeg"
+          imageSrc="https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711233/colter%20harris%20site/colter_lensflare_gfs4dr.jpg"
           styles={PORTRAIT_IMAGE_STYLES}
         />
       </div>

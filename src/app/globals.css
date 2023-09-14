@@ -4,7 +4,7 @@
 
 body {
   @apply animate-moveBackgroundDown;
-  background-image: url('../../public/images/purpleish.png');
+  background-image: url('https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711313/colter%20harris%20site/purpleish_z6dlpr.png');
   color: whitesmoke;
   font-size: 1.5rem;
   text-shadow: whitesmoke 1px 0 10px;
@@ -13,7 +13,7 @@ body {
 main {
   @apply animate-moveBackgroundDown;
   background-attachment: fixed;
-  background-image: url('/images/bubbles.png');
+  background-image: url('https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711264/colter%20harris%20site/bubbles_eyf6sr.png');
   border: 10px outset #9198e5;
   margin: 5%;
 }
