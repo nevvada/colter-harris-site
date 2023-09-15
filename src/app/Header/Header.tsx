@@ -19,19 +19,19 @@ function Header(props: HeaderProps) {
   const [firstImage, secondImage] = props.headerImages;
 
   return (
-    <header className={`items-center grid mt-4 ${styles.header}`}>
+    <header className={`items-center mt-4 ${styles.header}`}>
       <CustomImage
+        classes="w-auto"
         imageAlt={firstImage.imageAlt}
         imageSrc={firstImage.imageSrc}
-        styles={{ maxContent: '120px', width: 'auto' }}
       />
 
-      <h1 className={styles.headerText}>{props.headerText}</h1>
+      <h1 className={`${styles.headerText} text-center`}>{props.headerText}</h1>
 
       <CustomImage
+        classes={`${styles.secondImage} w-auto`}
         imageAlt={secondImage.imageAlt}
         imageSrc={secondImage.imageSrc}
-        styles={{ maxContent: '120px', width: 'auto' }}
       />
     </header>
   )

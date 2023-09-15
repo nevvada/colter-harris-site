@@ -36,7 +36,7 @@
 
 @media screen and (min-width: 1024px) {
   .colterHarrisHeader {
-    width: 250px;
+    width: 400px;
   }
 
   .linkButton {
@@ -57,7 +57,7 @@
   .navBar {
     grid-template-rows: none;
     grid-template-columns: 25% 75%;
-    height: 80vh;
+    height: 950px;
     margin-top: 15%;
     margin-left: 5%;
     width: 80%;

@@ -9,7 +9,7 @@ export const ABOUT_PAGE = {
       imageSrc: 'https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711280/colter%20harris%20site/dancing_dudes_dhwrjf.gif',
     },
   ],
-  headerText: 'whoami',
+  headerText: 'it me',
 };
 
 export const CONTACT_PAGE = {

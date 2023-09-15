@@ -77,7 +77,7 @@ function NavBar() {
         alt="Colter Harris header"
         className={styles.colterHarrisHeader}
         height={0}
-        src="/images/colter_harris_header.png"
+        src="https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711239/colter%20harris%20site/colter_harris_header_qua3sx.png"
         width={800}
       />
 
