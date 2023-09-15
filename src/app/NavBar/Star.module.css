@@ -1,6 +1,6 @@
 .marqueeContent {
   animation: marquee 10s linear infinite;
-  height: 200px;
+  height: 100px;
 }
 
 @keyframes marquee {
