@@ -1,0 +1,21 @@
+# Use an official Node.js runtime as the parent image
+FROM node:14
+
+# Set the working directory in the Docker container
+WORKDIR /usr/src/app
+
+# NOTE: copy package json first, to cache this layer. that way any changes to codebase that don't affect package.json don't rerun npm install
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
+
+# Install the app's dependencies in the container
+RUN npm install
+
+# Copy the rest of the app's files to the container
+COPY . .
+
+# Build the Next.js app
+RUN npm run build
+
+# Specify the command to run when the container starts
+CMD ["npm", "start"]
