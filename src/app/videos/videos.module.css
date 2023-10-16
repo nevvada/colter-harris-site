@@ -1,7 +1,0 @@
-.embed {
-  max-width: 800px;
-}
-
-.embed > iframe {
-  width: -webkit-fill-available;
-}

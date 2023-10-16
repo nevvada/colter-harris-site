@@ -55,7 +55,7 @@ function ContactPage() {
         headerText={CONTACT_PAGE.headerText}
       />
 
-      <div className={`grid content ${styles.contactContainer}`}>
+      <div className="grid content grid-rows-[auto_1fr] lg:gap-5 lg:grid-cols-[1fr_1fr] lg:grid-rows-[auto_auto]">
         <p className={styles.contactText}>
           got some feedback? wanna collab? shoot me an email.
         </p>
@@ -98,7 +98,7 @@ function ContactPage() {
           />
 
           <button
-            className={`items-center flex text-3xl h-16 justify-center mt-5 p-8 cursor-pointer ${styles.contactFormButton}`}
+            className="items-center flex text-3xl h-16 justify-center mt-5 p-8 cursor-pointer bg-[linear-gradient(#0b5563,#9198e5)] border-[10px] border-[#9198e5] hover:bg-[linear-gradient(#9198e5,#0b5563)] hover:border-[10px] hover:border-[#0b5563]"
             type="submit"
           >
             send message

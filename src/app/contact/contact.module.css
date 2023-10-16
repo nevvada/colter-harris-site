@@ -1,29 +1,9 @@
-.contactContainer {
-  grid-template-rows: auto 1fr;
-}
-
 @media screen and (min-width: 1024px) {
-  .contactContainer {
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
   .contactText {
-    order: 2;
+    @apply order-2;
   }
 
   .contactForm {
-    order: 1;
+    @apply order-1;
   }
-}
-
-.contactFormButton {
-  background-image: linear-gradient(#0b5563, #9198e5);
-  border: 10px outset #9198e5;
-}
-
-.contactFormButton:hover {
-  background-image: linear-gradient(#9198e5, #0b5563);
-  border: 10px inset #0b5563;
 }

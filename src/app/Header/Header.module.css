@@ -1,39 +1,5 @@
-.header {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-}
-
-.header img {
-  height: 150px;
-}
-
-.headerText {
-  font-size: 4rem;
-  grid-column: 1 / span 2;
-  grid-row: 2;
-}
-
 @media screen and (min-width: 1024px) {
-  .header {
-    grid-column: span 3;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  .header img {
-    height: 200px;
-  }
-
-  .headerText {
-    grid-column: auto;
-    grid-row: auto;
-    order: 2;
-  }
-
   .secondImage {
-    order: 3;
+    @apply order-3;
   }
 }
