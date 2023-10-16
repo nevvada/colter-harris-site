@@ -1,84 +1,28 @@
 .linkButton {
-  background-image: linear-gradient(#0b5563, #9198e5);
-  border: 10px outset #9198e5;
-  width: 20rem;
-}
-
-.linkButton:hover {
-  background-image: linear-gradient(#9198e5, #0b5563);
-  border: 10px inset #0b5563;
+  @apply bg-[linear-gradient(#0b5563,#9198e5)] w-80 border-[10px] border-[#9198e5] hover:bg-[linear-gradient(#9198e5,#0b5563)] hover:border-[10px] hover:border-[#0b5563] lg:grid-rows-[80%_20%] lg:h-48 lg:w-48;
+  animation: button-color-change 0.5s linear infinite alternate;
+  border-style: outset;
 }
 
 /* in mobile, remove the image to conserve space */
 .linkButton > img {
-  display: none;
-}
-
-.colterHarrisHeader {
-  width: 350px;
+  @apply hidden lg:block;
 }
 
 .navBar {
   @apply animate-moveBackgroundDown;
-  background-attachment: fixed;
-  background-image: url('https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711264/colter%20harris%20site/bubbles_eyf6sr.png');
-  border: 10px outset #9198e5;
-  display: flex;
-  flex-direction: column;
-  margin: 5%;
-  padding: 10px 20px;
-}
+  border-style: outset;
+  background-image: url('https://res.cloudinary.com/dmfnrbrly/image/upload/v1694711264/colter%20harris%20site/bubbles\_eyf6sr.png');
 
-.links {
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 1024px) {
-  .colterHarrisHeader {
-    width: 400px;
-  }
-
-  .linkButton {
-    grid-template-rows: 80% 20%;
-    height: 10rem;
-    width: 10rem;
-  }
-
-  .linkButton > img {
-    display: block;
-  }
-
-  .links {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .navBar {
-    grid-template-rows: none;
-    grid-template-columns: 25% 75%;
-    height: 950px;
-    margin-top: 15%;
-    margin-left: 5%;
-    width: 80%;
-  }
 }
 
 /* ANIMATIONS */
-@keyframes flash {
+@keyframes button-color-change {
   0% {
-    color: #a2bce0;
+    color: #fff;
   }
-  25% {
-    color: #5299d3;
-  }
-  50% {
-    color: #50285a;
-  }
-  75% {
-    color: #0b5563;
-  }
+
   100% {
-    color: #a2bce0;
+    color: #161BB2
   }
 }
