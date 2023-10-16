@@ -70,9 +70,8 @@ function NavBar() {
     <aside
       className={`
         ${styles.navBar}
-        items-center mb-5 bg-fixed
-        flex flex-col m-[5%] px-5 py-2.5 border-[10px] border-[#9198e5] lg:grid-rows-none lg:grid-cols-[25%_75%] lg:max-h-[1100px] lg:w-4/5 lg:ml-[5%] lg:mt-[15%]
-        `}
+        items-center mb-5 bg-fixed flex flex-col m-[5%] px-5 py-2.5 border-[10px] border-[#9198e5] lg:grid-rows-none lg:grid-cols-[25%_75%] lg:max-h-[1100px] lg:w-4/5 lg:ml-[5%] lg:mt-[15%]
+      `}
     >
       <Image
         alt="Colter Harris header"
